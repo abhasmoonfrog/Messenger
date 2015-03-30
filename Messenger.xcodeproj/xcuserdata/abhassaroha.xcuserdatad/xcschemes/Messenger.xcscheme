@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F40C25F1AC8D80F00954ADE"
+               BlueprintIdentifier = "5F40C29A1AC8E44F00954ADE"
                BuildableName = "Messenger.app"
                BlueprintName = "Messenger"
                ReferencedContainer = "container:Messenger.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F40C27B1AC8D80F00954ADE"
+               BlueprintIdentifier = "5F40C2B31AC8E45000954ADE"
                BuildableName = "MessengerTests.xctest"
                BlueprintName = "MessengerTests"
                ReferencedContainer = "container:Messenger.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F40C27B1AC8D80F00954ADE"
+               BlueprintIdentifier = "5F40C2B31AC8E45000954ADE"
                BuildableName = "MessengerTests.xctest"
                BlueprintName = "MessengerTests"
                ReferencedContainer = "container:Messenger.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F40C25F1AC8D80F00954ADE"
+            BlueprintIdentifier = "5F40C29A1AC8E44F00954ADE"
             BuildableName = "Messenger.app"
             BlueprintName = "Messenger"
             ReferencedContainer = "container:Messenger.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F40C25F1AC8D80F00954ADE"
+            BlueprintIdentifier = "5F40C29A1AC8E44F00954ADE"
             BuildableName = "Messenger.app"
             BlueprintName = "Messenger"
             ReferencedContainer = "container:Messenger.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F40C25F1AC8D80F00954ADE"
+            BlueprintIdentifier = "5F40C29A1AC8E44F00954ADE"
             BuildableName = "Messenger.app"
             BlueprintName = "Messenger"
             ReferencedContainer = "container:Messenger.xcodeproj">
