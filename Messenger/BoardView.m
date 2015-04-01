@@ -28,6 +28,7 @@ const float THICKNESS = 5;
     NSString* _challenger;
     enum GameState _gameState;
     enum Marker _marker;
+    UIView *_winLine;
 }
 
 - (void) initBoardWithRows:(int) r Cols:(int) c Default:(BOOL) firstTurn {
@@ -181,12 +182,12 @@ const float THICKNESS = 5;
                 NSNumber *elem = [_board objectAtIndex:[self getIndexForRow:i AndCol:j]];
                 count += (int) [elem intValue];
             }
-            if (count == [_rows intValue]) {
+            if (abs(count) == [_rows intValue]) {
                 result = YES;
                 CGSize unit = [self getUnit];
                 CGRect rect = CGRectMake(4, (i + 0.5)*unit.height + 4,
                                          320, THICKNESS);
-                [self drawWinLine:rect];
+                _winLine = [self drawWinLine:rect];
                 break;
             }
         }
@@ -199,12 +200,12 @@ const float THICKNESS = 5;
                 NSNumber *elem = [_board objectAtIndex:[self getIndexForRow:j AndCol:i]];
                 count += (int) [elem intValue];
             }
-            if (count == [_rows intValue]) {
+            if (abs(count) == [_rows intValue]) {
                 result = YES;
                 CGSize unit = [self getUnit];
                 CGRect rect = CGRectMake((i + 0.5)*unit.height + 4, 4,
                                          THICKNESS, 320);
-                [self drawWinLine:rect];
+                _winLine = [self drawWinLine:rect];
                 break;
             }
         }
@@ -216,12 +217,12 @@ const float THICKNESS = 5;
             NSNumber *elem = [_board objectAtIndex:[self getIndexForRow:i AndCol:i]];
             count += (int) [elem intValue];
         }
-        if (count == [_rows intValue]) {
+        if (abs(count) == [_rows intValue]) {
             CGSize unit = [self getUnit];
             CGRect rect = CGRectMake(4, ([_rows intValue]/2 + 0.5)*unit.height + 4,
                                      320, THICKNESS);
-            UIView *line = [self drawWinLine:rect];
-            line.transform = CGAffineTransformRotate(line.transform, -45);
+            _winLine = [self drawWinLine:rect];
+            _winLine.transform = CGAffineTransformRotate(_winLine.transform, -45);
             result = YES;
         }
     }
@@ -232,12 +233,12 @@ const float THICKNESS = 5;
             NSNumber *elem = [_board objectAtIndex:[self getIndexForRow:i AndCol:[_rows intValue] - i - 1]];
             count += (int) [elem intValue];
         }
-        if (count == [_rows intValue]) {
+        if (abs(count) == [_rows intValue]) {
             CGSize unit = [self getUnit];
             CGRect rect = CGRectMake(4, ([_rows intValue]/2 + 0.5)*unit.height + 4,
                                      320, THICKNESS);
-            UIView *line = [self drawWinLine:rect];
-            line.transform = CGAffineTransformRotate(line.transform, 45);
+            _winLine = [self drawWinLine:rect];
+            _winLine.transform = CGAffineTransformRotate(_winLine.transform, 45);
             result = YES;
         }
     }
@@ -262,6 +263,25 @@ const float THICKNESS = 5;
     winLine.backgroundColor = [UIColor greenColor];
     [self addSubview:winLine];
     return winLine;
+}
+
+-(void) reset {
+    for (int i = 0; i < _rows.intValue; i++) {
+        for (int j = 0; j < _cols.intValue; j++) {
+            UIImageView *view = [_images objectAtIndex:[self getIndexForRow:i AndCol:j]];
+            if ((id)view != (id)[NSNull null] && view != nil) {
+                if ([view superview]) {
+                    [view removeFromSuperview];
+                }
+            }
+        }
+    }
+    if (_winLine != nil) {
+        if ([_winLine superview]) {
+            [_winLine removeFromSuperview];
+        }
+    }
+    
 }
 
 + (void) setImageForView: (UIImageView*) view ForUserId:(NSString*) userId WithMarker:(NSString*) marker {

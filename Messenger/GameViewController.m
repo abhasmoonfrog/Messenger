@@ -104,13 +104,18 @@ const int HEIGHT = 320;
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         CGPoint pos = [gestureRecognizer locationInView:_board];
         [_board handleTouch:pos];
-        _endGame.hidden = [_board moveComplete];
-        _challenge.hidden = ![_board moveComplete];
+        [self setButtonsForGame];
     }
+}
+
+-(void) setButtonsForGame {
+    _endGame.hidden = [_board moveComplete];
+    _challenge.hidden = ![_board moveComplete];
 }
 
 - (void) showGameView {
     FBSDKMessengerURLHandlerReplyContext *context = [[FacebookMessengerHelper getInstance] replyContext];
+    [_board reset];
     if (context != nil) {
         NSDictionary *dict = [MessageGenerator receive:context.metadata];
         MessengerMessage *msg = [MessengerMessage createWithDict:dict];
@@ -124,6 +129,7 @@ const int HEIGHT = 320;
     } else {
         [self initDefaultGame];
     }
+    [self setButtonsForGame];
     [BoardView  setImageForView:_player ForUserId:[[FBSDKAccessToken currentAccessToken] userID]
                      WithMarker:[BoardView getImageNameForMarker:[_board getMarker]]];
     [BoardView  setImageForView:_opponent ForUserId:[_board getChallenger]

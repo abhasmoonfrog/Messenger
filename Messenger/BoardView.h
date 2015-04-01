@@ -26,6 +26,7 @@ enum GameState {
 - (enum GameState) getGameState;
 - (int) getMarker;
 - (void) setChallenger:(NSString*) challenger;
+- (void) reset;
 @property (nonatomic, readonly) NSNumber *rows;
 @property (nonatomic, readonly) NSNumber *cols;
 
