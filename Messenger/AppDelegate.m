@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "FacebookMessengerHelper.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <FBSDKMessengerURLHandlerDelegate>
 
 @end
 
@@ -22,6 +23,9 @@
     [FBSDKLoginButton class];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
+    _messengerUrlHandler = [[FBSDKMessengerURLHandler alloc] init];
+    _messengerUrlHandler.delegate = self;
+
     return YES;
 }
 
@@ -49,10 +53,39 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // Check if the handler knows what to do with this url
+    if ([_messengerUrlHandler canOpenURL:url sourceApplication:sourceApplication]) {
+        // Handle the url
+        [_messengerUrlHandler openURL:url sourceApplication:sourceApplication];
+    }
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                                           openURL:url
                                                 sourceApplication:sourceApplication
                                                        annotation:annotation];
+}
+
+/*
+ * When people enter your app through the composer in Messenger,
+ * this delegate function will be called.
+ */
+- (void)messengerURLHandler:(FBSDKMessengerURLHandler *)messengerURLHandler
+didHandleOpenFromComposerWithContext:(FBSDKMessengerURLHandlerOpenFromComposerContext *)context;
+{
+    [[FacebookMessengerHelper getInstance] setShareMode:MessengerShareModeComposer];
+    [FacebookMessengerHelper getInstance].composerContext = context;
+    // do nothing for now
+}
+
+/*
+ * When people enter your app through the "Reply" button on content
+ * this delegate function will be called.
+ */
+- (void)messengerURLHandler:(FBSDKMessengerURLHandler *)messengerURLHandler
+  didHandleReplyWithContext:(FBSDKMessengerURLHandlerReplyContext *)context;
+{
+    [[FacebookMessengerHelper getInstance] setShareMode:MessengerShareModeReply];
+    [FacebookMessengerHelper getInstance].replyContext = context;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ShowGameView" object:nil];
 }
 
 @end

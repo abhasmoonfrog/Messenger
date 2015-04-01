@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKAccessToken.h>
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
+#import "FacebookMessengerHelper.h"
 
 @interface ViewController ()
 
@@ -18,21 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(showGameView) name:@"ShowGameView" object:nil];
     // Do any additional setup after loading the view, typically from a nib.
     self.loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
-    if ([FBSDKAccessToken currentAccessToken]) {
+    if ([[FBSDKAccessToken currentAccessToken] userID]) {
         // User is logged in, do work such as go to next view controller.
+        // TODO: hide button on login
+        self.loginButton.hidden = YES;
+        self.playButton.hidden = NO;
+    } else {
+        self.loginButton.hidden = NO;
+        self.playButton.hidden = YES;
     }
-    //Define the size of the circular button at creation time
-    CGFloat buttonWidth = 50;
-    UIButton *button = [FBSDKMessengerShareButton circularButtonWithStyle:FBSDKMessengerShareButtonStyleBlue
-                                                                    width:buttonWidth];
-    [button addTarget:self action:@selector(_shareButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    NSLocalizedString(@"Send", @"Button label for sending a message");
-    CGRect frame = button.frame;
-    frame.origin.y = 100;
-    button.frame = frame;
+    CGSize size = self.view.bounds.size;
+    NSLog(@"Size: %f, %f", size.width, size.height);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +45,11 @@
 
 - (void)_shareButtonPressed: (id) sender {
     // do something here
+    [FacebookMessengerHelper assertMessengerApp];
+}
+
+- (void) showGameView {
+    [self performSegueWithIdentifier:@"GameScreen" sender:self];
 }
 
 @end

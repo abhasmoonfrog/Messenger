@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Selection Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -13,19 +14,161 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screen_2_Hack-a-thon-Game" translatesAutoresizingMaskIntoConstraints="NO" id="qZl-pW-KjK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
                             <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-jV-jtb" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="10" y="390" width="300" height="100"/>
+                                <rect key="frame" x="60" y="195" width="200" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3s4-S6-0t8" userLabel="Start Game">
+                                <rect key="frame" x="110" y="220" width="100" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="Start"/>
+                                <state key="normal" backgroundImage="button_playnow">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="js8-42-MAo" kind="show" identifier="GameScreen" id="0SV-Yw-fBh"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Selection Screen" id="XfC-hY-O6x"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="loginButton" destination="OdK-jV-jtb" id="Zlx-wd-TqZ"/>
+                        <outlet property="playButton" destination="3s4-S6-0t8" id="d0l-Wq-xx4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="171"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="Vsg-Es-uPp">
+            <objects>
+                <viewController id="js8-42-MAo" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cCg-kS-R7X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fke-xH-xCy"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="TAt-Om-SQG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-Kw-Ehh">
+                                <rect key="frame" x="118" y="430" width="84" height="30"/>
+                                <state key="normal" backgroundImage="button_backtomenu">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MainScreen" id="Ybt-eR-4fJ"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRT-xo-hGd" customClass="BoardView">
+                                <rect key="frame" x="0.0" y="80" width="320" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-sh-w7X">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-Vc-I8n">
+                                        <rect key="frame" x="4" y="4" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="98t-tb-vgq">
+                                        <rect key="frame" x="110" y="4" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-kI-VN6">
+                                        <rect key="frame" x="216" y="4" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="UX6-Po-fbM">
+                                        <rect key="frame" x="110" y="110" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="STU-M8-F9R">
+                                        <rect key="frame" x="4" y="110" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="B9b-ob-zfT">
+                                        <rect key="frame" x="216" y="110" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="l7S-7J-qk6">
+                                        <rect key="frame" x="4" y="216" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="iD9-wF-h7s">
+                                        <rect key="frame" x="110" y="216" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="Cl1-eu-7eU">
+                                        <rect key="frame" x="216" y="216" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hack-a-thon-Game_end_game" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-ah-GMw">
+                                        <rect key="frame" x="10" y="10" width="300" height="300"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.53333333329999999" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="victoryScreen" destination="pAZ-ah-GMw" id="iJK-z3-tIn"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-f4-p0B">
+                                <rect key="frame" x="118" y="430" width="84" height="30"/>
+                                <state key="normal" title="Button" image="button_msgrsend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChallenge:" destination="js8-42-MAo" eventType="touchUpInside" id="y4c-cK-brZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="IBF-4C-hoI">
+                                <rect key="frame" x="77" y="10" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="FsK-Er-Mca">
+                                <rect key="frame" x="184" y="10" width="60" height="60"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enemy" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-kK-j3t">
+                                <rect key="frame" x="252" y="28" width="60" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.83137254900000002" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="You" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wk3-73-cu6">
+                                <rect key="frame" x="29" y="28" width="40" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.83137254900000002" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.53333333333333333" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="board" destination="jRT-xo-hGd" id="eEF-x7-nhh"/>
+                        <outlet property="challenge" destination="QCO-f4-p0B" id="6w3-lU-O7m"/>
+                        <outlet property="endGame" destination="Dkc-Kw-Ehh" id="81S-YI-mvK"/>
+                        <outlet property="opponent" destination="FsK-Er-Mca" id="aqV-QS-6Tp"/>
+                        <outlet property="player" destination="IBF-4C-hoI" id="Lvf-AA-6cc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlG-9k-cQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="171"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hack-a-thon-Game_end_game" width="300" height="226"/>
+        <image name="background" width="320" height="320"/>
+        <image name="button_backtomenu" width="361" height="87"/>
+        <image name="button_msgrsend" width="370" height="100"/>
+        <image name="button_playnow" width="403" height="137"/>
+        <image name="cell" width="120" height="120"/>
+        <image name="cross" width="100" height="100"/>
+        <image name="dot" width="100" height="100"/>
+        <image name="screen_2_Hack-a-thon-Game" width="640" height="960"/>
+    </resources>
 </document>

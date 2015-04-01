@@ -13,25 +13,21 @@
 		5F40C2AA1AC8E45000954ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F40C2A81AC8E45000954ADE /* Main.storyboard */; };
 		5F40C2AC1AC8E45000954ADE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F40C2AB1AC8E45000954ADE /* Images.xcassets */; };
 		5F40C2AF1AC8E45000954ADE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F40C2AD1AC8E45000954ADE /* LaunchScreen.xib */; };
-		5F40C2BB1AC8E45000954ADE /* MessengerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F40C2BA1AC8E45000954ADE /* MessengerTests.m */; };
 		5F40C2C71AC8E4BB00954ADE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F40C2C41AC8E4BB00954ADE /* FBSDKCoreKit.framework */; };
 		5F40C2C81AC8E4BB00954ADE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F40C2C51AC8E4BB00954ADE /* FBSDKLoginKit.framework */; };
 		5F40C2C91AC8E4BB00954ADE /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F40C2C61AC8E4BB00954ADE /* FBSDKMessengerShareKit.framework */; };
 		5F40C2CB1AC8FFDB00954ADE /* FacebookMessengerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F40C2CA1AC8FFDB00954ADE /* FacebookMessengerHelper.m */; };
+		5FF06C001ACA964200B2C1E4 /* abhas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FF06BFF1ACA964200B2C1E4 /* abhas.jpg */; };
+		5FF06C021ACA983900B2C1E4 /* swapan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FF06C011ACA983900B2C1E4 /* swapan.jpg */; };
+		5FF06C041ACADF9B00B2C1E4 /* MessengerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF06C031ACADF9B00B2C1E4 /* MessengerMessage.m */; };
+		5FF06C071ACB575000B2C1E4 /* FetchFacebookImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF06C061ACB575000B2C1E4 /* FetchFacebookImage.m */; };
+		5FF3D2101AC951AB0023C624 /* MessageGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3D20F1AC951AB0023C624 /* MessageGenerator.m */; };
+		5FF3D2151AC96D3F0023C624 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3D2141AC96D3F0023C624 /* GameViewController.m */; };
+		5FF3D2181AC978C10023C624 /* BoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3D2171AC978C10023C624 /* BoardView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5F40C2B51AC8E45000954ADE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F40C2931AC8E44F00954ADE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F40C29A1AC8E44F00954ADE;
-			remoteInfo = Messenger;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5F40C29B1AC8E44F00954ADE /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F40C29B1AC8E44F00954ADE /* teenpatti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teenpatti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F40C29F1AC8E45000954ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F40C2A01AC8E45000954ADE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F40C2A21AC8E45000954ADE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,7 +37,6 @@
 		5F40C2A91AC8E45000954ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F40C2AB1AC8E45000954ADE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F40C2AE1AC8E45000954ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5F40C2B41AC8E45000954ADE /* MessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F40C2B91AC8E45000954ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F40C2BA1AC8E45000954ADE /* MessengerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessengerTests.m; sourceTree = "<group>"; };
 		5F40C2C41AC8E4BB00954ADE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -49,6 +44,18 @@
 		5F40C2C61AC8E4BB00954ADE /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		5F40C2CA1AC8FFDB00954ADE /* FacebookMessengerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookMessengerHelper.m; sourceTree = "<group>"; };
 		5F40C2CC1AC8FFF200954ADE /* FacebookMessengerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookMessengerHelper.h; sourceTree = "<group>"; };
+		5FF06BFE1AC97FCB00B2C1E4 /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
+		5FF06BFF1ACA964200B2C1E4 /* abhas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abhas.jpg; sourceTree = "<group>"; };
+		5FF06C011ACA983900B2C1E4 /* swapan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swapan.jpg; sourceTree = "<group>"; };
+		5FF06C031ACADF9B00B2C1E4 /* MessengerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerMessage.m; sourceTree = "<group>"; };
+		5FF06C051ACADFDD00B2C1E4 /* MessengerMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessengerMessage.h; sourceTree = "<group>"; };
+		5FF06C061ACB575000B2C1E4 /* FetchFacebookImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchFacebookImage.m; sourceTree = "<group>"; };
+		5FF06C081ACB576600B2C1E4 /* FetchFacebookImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchFacebookImage.h; sourceTree = "<group>"; };
+		5FF3D20F1AC951AB0023C624 /* MessageGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageGenerator.m; sourceTree = "<group>"; };
+		5FF3D2111AC951BE0023C624 /* MessageGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageGenerator.h; sourceTree = "<group>"; };
+		5FF3D2141AC96D3F0023C624 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5FF3D2161AC96D5C0023C624 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		5FF3D2171AC978C10023C624 /* BoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +66,6 @@
 				5F40C2C71AC8E4BB00954ADE /* FBSDKCoreKit.framework in Frameworks */,
 				5F40C2C81AC8E4BB00954ADE /* FBSDKLoginKit.framework in Frameworks */,
 				5F40C2C91AC8E4BB00954ADE /* FBSDKMessengerShareKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F40C2B11AC8E45000954ADE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +87,7 @@
 		5F40C29C1AC8E44F00954ADE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F40C29B1AC8E44F00954ADE /* Messenger.app */,
-				5F40C2B41AC8E45000954ADE /* MessengerTests.xctest */,
+				5F40C29B1AC8E44F00954ADE /* teenpatti.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +105,16 @@
 				5F40C29E1AC8E45000954ADE /* Supporting Files */,
 				5F40C2CA1AC8FFDB00954ADE /* FacebookMessengerHelper.m */,
 				5F40C2CC1AC8FFF200954ADE /* FacebookMessengerHelper.h */,
+				5FF3D20F1AC951AB0023C624 /* MessageGenerator.m */,
+				5FF3D2111AC951BE0023C624 /* MessageGenerator.h */,
+				5FF3D2141AC96D3F0023C624 /* GameViewController.m */,
+				5FF3D2161AC96D5C0023C624 /* GameViewController.h */,
+				5FF3D2171AC978C10023C624 /* BoardView.m */,
+				5FF06BFE1AC97FCB00B2C1E4 /* BoardView.h */,
+				5FF06C031ACADF9B00B2C1E4 /* MessengerMessage.m */,
+				5FF06C051ACADFDD00B2C1E4 /* MessengerMessage.h */,
+				5FF06C061ACB575000B2C1E4 /* FetchFacebookImage.m */,
+				5FF06C081ACB576600B2C1E4 /* FetchFacebookImage.h */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -113,6 +122,8 @@
 		5F40C29E1AC8E45000954ADE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5FF06C011ACA983900B2C1E4 /* swapan.jpg */,
+				5FF06BFF1ACA964200B2C1E4 /* abhas.jpg */,
 				5F40C29F1AC8E45000954ADE /* Info.plist */,
 				5F40C2A01AC8E45000954ADE /* main.m */,
 			);
@@ -153,26 +164,8 @@
 			);
 			name = Messenger;
 			productName = Messenger;
-			productReference = 5F40C29B1AC8E44F00954ADE /* Messenger.app */;
+			productReference = 5F40C29B1AC8E44F00954ADE /* teenpatti.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5F40C2B31AC8E45000954ADE /* MessengerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F40C2C11AC8E45000954ADE /* Build configuration list for PBXNativeTarget "MessengerTests" */;
-			buildPhases = (
-				5F40C2B01AC8E45000954ADE /* Sources */,
-				5F40C2B11AC8E45000954ADE /* Frameworks */,
-				5F40C2B21AC8E45000954ADE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5F40C2B61AC8E45000954ADE /* PBXTargetDependency */,
-			);
-			name = MessengerTests;
-			productName = MessengerTests;
-			productReference = 5F40C2B41AC8E45000954ADE /* MessengerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -185,10 +178,7 @@
 				TargetAttributes = {
 					5F40C29A1AC8E44F00954ADE = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					5F40C2B31AC8E45000954ADE = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 5F40C29A1AC8E44F00954ADE;
+						DevelopmentTeam = YFC8T84PY6;
 					};
 				};
 			};
@@ -206,7 +196,6 @@
 			projectRoot = "";
 			targets = (
 				5F40C29A1AC8E44F00954ADE /* Messenger */,
-				5F40C2B31AC8E45000954ADE /* MessengerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,16 +205,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF06C001ACA964200B2C1E4 /* abhas.jpg in Resources */,
 				5F40C2AA1AC8E45000954ADE /* Main.storyboard in Resources */,
 				5F40C2AF1AC8E45000954ADE /* LaunchScreen.xib in Resources */,
+				5FF06C021ACA983900B2C1E4 /* swapan.jpg in Resources */,
 				5F40C2AC1AC8E45000954ADE /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F40C2B21AC8E45000954ADE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,30 +220,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF06C071ACB575000B2C1E4 /* FetchFacebookImage.m in Sources */,
+				5FF3D2101AC951AB0023C624 /* MessageGenerator.m in Sources */,
 				5F40C2A71AC8E45000954ADE /* ViewController.m in Sources */,
 				5F40C2A41AC8E45000954ADE /* AppDelegate.m in Sources */,
+				5FF06C041ACADF9B00B2C1E4 /* MessengerMessage.m in Sources */,
 				5F40C2A11AC8E45000954ADE /* main.m in Sources */,
+				5FF3D2151AC96D3F0023C624 /* GameViewController.m in Sources */,
 				5F40C2CB1AC8FFDB00954ADE /* FacebookMessengerHelper.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F40C2B01AC8E45000954ADE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F40C2BB1AC8E45000954ADE /* MessengerTests.m in Sources */,
+				5FF3D2181AC978C10023C624 /* BoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5F40C2B61AC8E45000954ADE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F40C29A1AC8E44F00954ADE /* Messenger */;
-			targetProxy = 5F40C2B51AC8E45000954ADE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F40C2A81AC8E45000954ADE /* Main.storyboard */ = {
@@ -363,13 +336,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/abhassaroha/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Messenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = teenpatti;
+				PROVISIONING_PROFILE = "3456812B-E6AC-4361-9610-70021E573B32";
 			};
 			name = Debug;
 		};
@@ -377,47 +354,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/abhassaroha/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Messenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		5F40C2C21AC8E45000954ADE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MessengerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Messenger.app/Messenger";
-			};
-			name = Debug;
-		};
-		5F40C2C31AC8E45000954ADE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MessengerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Messenger.app/Messenger";
+				PRODUCT_NAME = teenpatti;
+				PROVISIONING_PROFILE = "3456812B-E6AC-4361-9610-70021E573B32";
 			};
 			name = Release;
 		};
@@ -440,14 +387,7 @@
 				5F40C2C01AC8E45000954ADE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		5F40C2C11AC8E45000954ADE /* Build configuration list for PBXNativeTarget "MessengerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F40C2C21AC8E45000954ADE /* Debug */,
-				5F40C2C31AC8E45000954ADE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
