@@ -63,7 +63,8 @@ const int HEIGHT = 320;
                                                        rows:[[_board rows] intValue]
                                                     columns:[[_board cols] intValue]
                                                  andContent:[_board getBoardState]
-                                                  andMarker:[NSNumber numberWithInt:[_board getMarker]]];
+                                                  andMarker:[NSNumber numberWithInt:[_board getMarker]]
+                                              andChallenger:[_board getChallenger]];
     [FacebookMessengerHelper shareImage:location withOptions:options];
 }
 
@@ -88,6 +89,7 @@ const int HEIGHT = 320;
 
 - (void) initGameBoardFromMessage: (MessengerMessage*) msg {
     NSLog(@"Starting game from fb message");
+    [_board setChallenger:msg.sender];
     [_board initBoardWithRows:[msg rows].intValue Cols:[msg cols].intValue Default:NO];
     [_board setBoardState:msg.state WithMarker:msg.marker];
 }

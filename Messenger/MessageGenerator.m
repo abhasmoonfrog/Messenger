@@ -30,6 +30,7 @@
 + (NSString*) respondWithMsgType: (NSNumber*) type rows:(int) r columns:(int) c
                       andContent: (NSArray*) content
                        andMarker: (NSNumber*) marker
+                   andChallenger: (NSString*) challenger
 {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setObject:[NSNumber numberWithInt:r] forKey:@"rows"];
@@ -38,6 +39,9 @@
     [dict setObject:content forKey:@"content"];
     [dict setObject:[[FacebookMessengerHelper getInstance] uuid] forKey:@"uuid"];
     [dict setObject:[FBSDKAccessToken currentAccessToken].userID forKey:@"sender"];
+    if (challenger != nil) {
+        [dict setObject:challenger forKey:@"receiver"];
+    }
     // send my marker to the receiver
     [dict setObject:marker forKey:@"marker"];
     NSError *error;

@@ -20,5 +20,6 @@
 + (NSString*) respondWithMsgType: (NSNumber*) type
                             rows:(int)r columns:(int) c
                       andContent: (NSArray*) content
-                       andMarker: (NSNumber*) marker;
+                       andMarker: (NSNumber*) marker
+                   andChallenger: (NSString*) challenger;
 @end

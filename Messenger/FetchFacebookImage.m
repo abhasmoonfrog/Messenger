@@ -37,13 +37,13 @@
     NSString *filename = [NSString stringWithFormat:@"%@", fbid];
     NSURL *saveLocation = [documentsDirectoryURL URLByAppendingPathComponent:filename];
     
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[saveLocation absoluteString] isDirectory:NO]) {
-        view.image = [UIImage imageNamed:[saveLocation absoluteString]];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[saveLocation path]]) {
+        view.image = [UIImage imageNamed:[saveLocation path]];
     } else {
         view.image = [UIImage imageNamed:holder];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
             // Create the image URL from some known string.
-            NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/pictures?width=150&height=150", fbid]];
+            NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=150&height=150", fbid]];
             
             NSError *downloadError = nil;
             // Create an NSData object from the contents of the given URL.

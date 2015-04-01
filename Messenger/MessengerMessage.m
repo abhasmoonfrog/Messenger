@@ -23,6 +23,7 @@
     msg.rows = [dict objectForKey:@"rows"];
     msg.cols = [dict objectForKey:@"cols"];
     msg.sender = [dict objectForKey:@"sender"];
+    msg.receiver = [dict objectForKey:@"receiver"];
     // we have sender's marker.
     msg.marker = [dict objectForKey:@"marker"];
     return msg;
@@ -42,6 +43,8 @@
     } else if (rows == 0 || cols == 0) {
         result = NO;
     } else if ([self.sender compare:[[FBSDKAccessToken currentAccessToken] userID]] == NSOrderedSame) {
+        result = NO;
+    } else if ([self.receiver compare:@""] != NSOrderedSame && [self.receiver compare:[[FBSDKAccessToken currentAccessToken] userID]] != NSOrderedSame) {
         result = NO;
     }
     return result;

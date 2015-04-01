@@ -23,5 +23,6 @@
 @property (nonatomic, strong) NSNumber *rows;
 @property (nonatomic, strong) NSNumber *cols;
 @property (nonatomic, strong) NSString *sender;
+@property (nonatomic, strong) NSString *receiver;
 @property (nonatomic, strong) NSNumber *marker;
 @end

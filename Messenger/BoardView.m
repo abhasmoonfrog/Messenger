@@ -286,7 +286,7 @@ const float THICKNESS = 5;
 
 + (void) setImageForView: (UIImageView*) view ForUserId:(NSString*) userId WithMarker:(NSString*) marker {
     [FetchFacebookImage downLoadImageForView:view
-                                      FromId:[[FBSDKAccessToken currentAccessToken] userID]
+                                      FromId:userId
                                  PlaceHolder:marker];
 }
 
